@@ -8,20 +8,28 @@
 import SwiftUI
 
 struct ContactView: View {
+    let contacts = AddressBook.contacts
+    @State var numberOfFavorites = 0
     var body: some View {
         ZStack {
             VStack {
                 ForEach(0..<4) { index in
                     HStack {
-                        //Image()
+                        Image(contacts[index].image).resizable().scaledToFit()
+                            .frame(width: 64, height: 64)
                         VStack(alignment: .leading) {
-                            Text("Alexis")
+                            Text("\(contacts[index].name)")
                                 .font(.title2).bold()
-                                Text("Postal Code: 10012")
-                                    .font(.body)
-                            }
-                            Image(systemName: "star").font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                        }.frame(width: 360.0, height: 100.0)
+                            //Text("\(contacts[index].displayPostalCode)" as String)
+                                    //.font(.body)
+                        }.padding()
+                        if contacts[index].isFavorite {
+                            Image(systemName: "star.fill").font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/).foregroundColor(Colors.main)
+                        } else {
+                            Image(systemName: "star").font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/).foregroundColor(Colors.main)
+                        }
+                            
+                    }.frame(width: 360.0, height: 100.0)
                     .background(Color.white)
                     .cornerRadius(16.0)
                     .shadow(color: Colors.shadow1, radius: 1.44, x: 0, y: 0.54)

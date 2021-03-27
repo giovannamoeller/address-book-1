@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48BA64DA260F02E40012F445 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 48BA64D9260F02E40012F445 /* URLImage */; };
 		48FEAA72260D8ED1002B1211 /* address_bookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FEAA71260D8ED1002B1211 /* address_bookApp.swift */; };
 		48FEAA74260D8ED1002B1211 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FEAA73260D8ED1002B1211 /* ContentView.swift */; };
 		48FEAA76260D8ED7002B1211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FEAA75260D8ED7002B1211 /* Assets.xcassets */; };
@@ -32,6 +33,8 @@
 		48FEAA8D260D8F8F002B1211 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		48FEAA91260DA7F1002B1211 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		48FEAA95260DA9AC002B1211 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C969F8612E411E4D6C01B8A9 /* Pods-address-book.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-address-book.debug.xcconfig"; path = "Target Support Files/Pods-address-book/Pods-address-book.debug.xcconfig"; sourceTree = "<group>"; };
+		D1BFB3C02721384A0729046A /* Pods-address-book.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-address-book.release.xcconfig"; path = "Target Support Files/Pods-address-book/Pods-address-book.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,18 +42,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48BA64DA260F02E40012F445 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		391FFE51A5A0140F1CFC2DEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C969F8612E411E4D6C01B8A9 /* Pods-address-book.debug.xcconfig */,
+				D1BFB3C02721384A0729046A /* Pods-address-book.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		48FEAA65260D8ED1002B1211 = {
 			isa = PBXGroup;
 			children = (
 				48FEAA95260DA9AC002B1211 /* .gitignore */,
 				48FEAA70260D8ED1002B1211 /* address-book */,
 				48FEAA6F260D8ED1002B1211 /* Products */,
+				391FFE51A5A0140F1CFC2DEE /* Pods */,
+				BBEBC784A4D7011CA75742ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +118,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BBEBC784A4D7011CA75742ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +132,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48FEAA7D260D8ED7002B1211 /* Build configuration list for PBXNativeTarget "address-book" */;
 			buildPhases = (
+				AFC37C9416EED803CBE2957C /* [CP] Check Pods Manifest.lock */,
 				48FEAA6A260D8ED1002B1211 /* Sources */,
 				48FEAA6B260D8ED1002B1211 /* Frameworks */,
 				48FEAA6C260D8ED1002B1211 /* Resources */,
@@ -119,6 +142,9 @@
 			dependencies = (
 			);
 			name = "address-book";
+			packageProductDependencies = (
+				48BA64D9260F02E40012F445 /* URLImage */,
+			);
 			productName = "address-book";
 			productReference = 48FEAA6E260D8ED1002B1211 /* address-book.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +172,9 @@
 				Base,
 			);
 			mainGroup = 48FEAA65260D8ED1002B1211;
+			packageReferences = (
+				48BA64D8260F02E40012F445 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 48FEAA6F260D8ED1002B1211 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,6 +196,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFC37C9416EED803CBE2957C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-address-book-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		48FEAA6A260D8ED1002B1211 /* Sources */ = {
@@ -304,6 +358,7 @@
 		};
 		48FEAA7E260D8ED7002B1211 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C969F8612E411E4D6C01B8A9 /* Pods-address-book.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +381,7 @@
 		};
 		48FEAA7F260D8ED7002B1211 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1BFB3C02721384A0729046A /* Pods-address-book.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -368,6 +424,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48BA64D8260F02E40012F445 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48BA64D9260F02E40012F445 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48BA64D8260F02E40012F445 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48FEAA66260D8ED1002B1211 /* Project object */;
 }

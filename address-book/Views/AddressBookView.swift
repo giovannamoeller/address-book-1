@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct AddressBookView: View {
+    @State var numberOfFavorites = 0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            Text("Address Book").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).bold().foregroundColor(Colors.main)
+            Spacer()
+            ContactView()
+            Spacer()
+            HStack(alignment: .lastTextBaseline) {
+                Text("You have \(numberOfFavorites) favorites.")
+            }
+        }
     }
 }
 
