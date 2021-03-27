@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddressBookView: View {
     @State var numberOfFavorites = 0
+    
     var body: some View {
         VStack {
             Spacer()
